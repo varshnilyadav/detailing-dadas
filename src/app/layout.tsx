@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingContact } from "@/components/ui/FloatingContact";
+import { Preloader } from "@/components/ui/Preloader";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable}`}>
       <body>
+        <Preloader />
         <Navbar />
         <main>{children}</main>
         <Footer />
