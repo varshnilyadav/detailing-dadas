@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import { ReviewCard } from '@/components/ui/ReviewCard';
 import { Carousel3D } from '@/components/ui/Carousel3D';
+import { HeroVideo } from '@/components/ui/HeroVideo';
 import { services } from '@/data/services';
 import { reviews } from '@/data/reviews';
 import { siteConfig } from '@/data/config';
@@ -21,16 +22,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          playsInline 
-          className={styles.videoBackground}
-          poster="/assets/hero-fallback.jpg"
-        >
-          <source src="/assets/hero-video.mp4" type="video/mp4" />
-        </video>
+        <HeroVideo />
         <div className={styles.heroOverlay}></div>
         
         <div className={styles.heroContent}>
