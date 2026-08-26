@@ -11,7 +11,7 @@ export const HeroVideo = () => {
     <>
       <div className={styles.fallbackContainer}>
         <Image 
-          src="/assets/hero-fallback.jpg" 
+          src="/assets/hero/hero-fallback.jpg" 
           alt="Detailing Dadas Hero" 
           fill 
           priority
@@ -27,7 +27,7 @@ export const HeroVideo = () => {
         className={`${styles.videoBackground} ${isLoaded ? styles.loaded : ''}`}
         onCanPlay={() => setIsLoaded(true)}
       >
-        <source src="/assets/hero-video.mp4" type="video/mp4" />
+        <source src="/assets/hero/hero-video.mp4" type="video/mp4" />
       </video>
     </>
   );

@@ -200,7 +200,7 @@ export default function Home() {
 
       {/* Final CTA */}
       <section className={styles.finalCta}>
-        <Image src="/assets/hero-fallback.jpg" alt="Background" fill className={styles.finalCtaBg} />
+        <Image src="/assets/hero/hero-fallback.jpg" alt="Background" fill className={styles.finalCtaBg} />
         <div className={styles.finalCtaContent}>
           <h2>Your Car Deserves Better.</h2>
           <p>Book your next detailing session with Detailing Dadas.</p>
