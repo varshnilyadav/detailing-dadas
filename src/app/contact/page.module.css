@@ -1,0 +1,134 @@
+.pageHeader {
+  padding: 10rem 0 4rem;
+  background-color: var(--color-black);
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-soft-white);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem var(--container-padding) 8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.formColumn {
+  background-color: var(--color-black);
+  padding: 2rem;
+  border-radius: 4px;
+}
+
+@media (min-width: 992px) {
+  .formColumn {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.iconWrapper {
+  background-color: rgba(0, 200, 83, 0.1);
+  color: var(--color-green);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactDetails h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-white);
+}
+
+.contactDetails p, .contactDetails a {
+  color: var(--color-soft-white);
+  line-height: 1.6;
+}
+
+.contactDetails a {
+  transition: color 0.3s;
+}
+
+.contactDetails a:hover {
+  color: var(--color-green);
+}
+
+.hoursList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hourRow {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-soft-white);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.hourRow:last-child {
+  border-bottom: none;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 400px;
+  background-color: var(--color-dark-graphite);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}

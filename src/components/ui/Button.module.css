@@ -1,0 +1,44 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.btnPrimary {
+  background-color: var(--color-green);
+  color: var(--color-black);
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.1);
+  box-shadow: var(--glow-green-hover);
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-green);
+}
+
+.btnSecondary:hover {
+  background-color: var(--color-green);
+  color: var(--color-black);
+  transform: translateY(-2px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}

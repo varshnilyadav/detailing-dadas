@@ -1,0 +1,80 @@
+.card {
+  background-color: var(--color-carbon-black);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(0, 200, 83, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.avatarWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  position: relative;
+  background-color: var(--color-dark-graphite);
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.date {
+  color: var(--color-muted-gray);
+  font-size: 0.85rem;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1rem;
+  color: #FBBC04; /* Google star color */
+}
+
+.content {
+  color: var(--color-soft-white);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.googleIcon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--color-muted-gray);
+  font-size: 0.85rem;
+  gap: 0.5rem;
+}
+
+.googleLogo {
+  opacity: 0.7;
+}
