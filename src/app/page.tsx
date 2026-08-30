@@ -20,7 +20,7 @@ export default function Home() {
   const instaReels = [
     { url: "https://www.instagram.com/reel/DbnerLwzzaT/" },
     { url: "https://www.instagram.com/reel/DaxcUzHzOaG/" },
-    { url: "https://www.instagram.com/reel/DYPXNcSz5XrXErOTTQnr9hS6XszYRL9jdJBzG80/" },
+    { url: "https://www.instagram.com/reel/DD2JyhUPBCg/" },
     { url: "https://www.instagram.com/reel/DWQrmeEkz2k/" }
   ];
 
