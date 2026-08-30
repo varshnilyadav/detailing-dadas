@@ -219,6 +219,52 @@
 }
 
 /* Why Us Section */
+.whySection {
+  position: relative;
+  overflow: hidden;
+}
+
+.whyBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.whyBackgroundImage {
+  object-fit: cover;
+  object-position: center right;
+  opacity: 0.8; /* Subtle soften/blend */
+}
+
+@media (max-width: 767px) {
+  .whyBackgroundImage {
+    object-position: 70% center;
+  }
+}
+
+.whyBackgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Dark overlay */
+}
+
+@media (max-width: 767px) {
+  .whyBackgroundOverlay {
+    background: rgba(0, 0, 0, 0.85); /* Slightly darker on mobile for readability */
+  }
+}
+
+.whyContent {
+  position: relative;
+  z-index: 1;
+}
+
 .whyGrid {
   display: grid;
   grid-template-columns: 1fr;

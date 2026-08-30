@@ -109,8 +109,17 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section className={styles.section}>
-        <div className={styles.container}>
+      <section className={`${styles.section} ${styles.whySection}`}>
+        <div className={styles.whyBackground}>
+          <Image 
+            src="/assets/why-us-bg.jpg" 
+            alt="Premium automotive detailing" 
+            fill 
+            className={styles.whyBackgroundImage} 
+          />
+          <div className={styles.whyBackgroundOverlay}></div>
+        </div>
+        <div className={`${styles.container} ${styles.whyContent}`}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Why Detailing Dadas?</h2>
           </div>
