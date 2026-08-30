@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Image from 'next/image';
 import { BookingForm } from '@/components/ui/BookingForm';
 import { Button } from '@/components/ui/Button';
 import { siteConfig } from '@/data/config';
@@ -19,8 +20,18 @@ export default function ContactPage() {
         </div>
       </header>
 
-      <section className={styles.container}>
-        <div className={styles.grid}>
+      <section className={styles.mainSection}>
+        <div className={styles.backgroundWrapper}>
+          <Image 
+            src="/assets/contact-bg.jpg" 
+            alt="Premium Detailing Studio" 
+            fill 
+            className={styles.bgImage} 
+          />
+          <div className={styles.bgOverlay}></div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.grid}>
           {/* Contact Information */}
           <div className={styles.infoColumn}>
             <div>
@@ -109,6 +120,7 @@ export default function ContactPage() {
             <h2 className={styles.sectionTitle}>Request a Booking</h2>
             <BookingForm />
           </div>
+        </div>
         </div>
       </section>
     </>
