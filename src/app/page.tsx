@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import { ReviewCard } from '@/components/ui/ReviewCard';
 import { Carousel3D } from '@/components/ui/Carousel3D';
+import Brands from '@/components/sections/Brands';
 import { HeroVideo } from '@/components/ui/HeroVideo';
 import { services } from '@/data/services';
 import { reviews } from '@/data/reviews';
@@ -39,6 +40,9 @@ export default function Home() {
           <div style={{ width: 1, height: 40, backgroundColor: 'var(--color-green)' }}></div>
         </div>
       </section>
+
+      {/* Brands Section */}
+      <Brands />
 
       {/* Intro Section */}
       <section className={`${styles.section} ${styles.sectionDark}`}>

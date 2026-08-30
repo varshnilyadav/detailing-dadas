@@ -1,0 +1,118 @@
+.section {
+  background-color: var(--color-black);
+  padding: 4rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--color-carbon-black);
+  border-bottom: 1px solid var(--color-carbon-black);
+}
+
+.brandsLabel {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTag {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-soft-white);
+  font-weight: 600;
+}
+
+.marqueeWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+
+/* Add subtle gradient masks to fade the edges */
+.marqueeWrapper::before,
+.marqueeWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marqueeWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-black), transparent);
+}
+
+.marqueeWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-black), transparent);
+}
+
+.marquee {
+  display: flex;
+  gap: 4rem;
+  padding: 0 2rem;
+  animation: scroll 30s linear infinite;
+  min-width: 200%;
+}
+
+.marqueeReverse {
+  animation-direction: reverse;
+  animation-duration: 35s;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.brandItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+
+.brandText {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333333; /* Darker grey to match graphite requested */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.brandItem:hover .brandText {
+  color: var(--color-white);
+}
+
+.brandLuxury {
+  font-weight: 300;
+  letter-spacing: 0.15em;
+}
+
+.brandBold {
+  font-weight: 800;
+}
+
+.premiumLogo {
+  height: 40px;
+  width: auto;
+  opacity: 0.5;
+  filter: grayscale(100%) brightness(200%);
+  transition: all 0.3s ease;
+}
+
+.brandItem:hover .premiumLogo {
+  opacity: 1;
+  filter: grayscale(0%) brightness(100%);
+}
+
+.spacer {
+  height: 4rem;
+}
