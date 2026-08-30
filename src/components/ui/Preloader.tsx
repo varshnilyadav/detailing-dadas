@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { Logo } from '@/components/ui/Logo';
 import styles from './Preloader.module.css';
 
 export const Preloader = () => {
@@ -46,15 +46,7 @@ export const Preloader = () => {
   return (
     <div className={`${styles.preloader} ${isFading ? styles.fadingOut : ''}`}>
       <div className={styles.content}>
-        <Image 
-          src="/assets/logo.png" 
-          alt="Detailing Dadas" 
-          width={280} 
-          height={60} 
-          className={styles.logo}
-          priority
-          style={{ objectFit: 'contain' }}
-        />
+        <Logo width={280} height={60} priority={true} className={styles.logo} />
         <div className={styles.progressBar}>
           <div className={styles.progressFill}></div>
         </div>

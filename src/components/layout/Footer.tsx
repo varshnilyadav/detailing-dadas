@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { MapPin, Phone } from 'lucide-react';
 import { siteConfig } from '@/data/config';
+import { Logo } from '@/components/ui/Logo';
 import styles from './Footer.module.css';
 
 export const Footer = () => {
@@ -15,13 +15,7 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className={styles.brandColumn}>
             <Link href="/" className={styles.logo}>
-              <Image 
-                src="/assets/logo.png" 
-                alt={siteConfig.name} 
-                width={200} 
-                height={40} 
-                className={styles.logoImage}
-              />
+              <Logo />
             </Link>
             <p className={styles.brandDesc}>
               {siteConfig.description}

@@ -1,0 +1,28 @@
+.logoContainer {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+}
+
+.logoImage {
+  display: block;
+  object-fit: contain;
+}
+
+.trademark {
+  position: absolute;
+  top: 5%;
+  right: -12px;
+  font-size: 11px;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1;
+  font-family: var(--font-main);
+  opacity: 0.8;
+}
+
+/* Adjust trademark size for larger logos like preloader */
+.logoContainer.large .trademark {
+  font-size: 14px;
+  right: -16px;
+}

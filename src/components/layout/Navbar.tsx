@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/data/config';
 import { Button } from '@/components/ui/Button';
+import { Logo } from '@/components/ui/Logo';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -48,14 +48,7 @@ export const Navbar = () => {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.navContainer}>
         <Link href="/" className={styles.logo}>
-          <Image 
-            src="/assets/logo.png" 
-            alt={siteConfig.name} 
-            width={200} 
-            height={40} 
-            className={styles.logoImage}
-            priority
-          />
+          <Logo priority={true} />
         </Link>
 
         {/* Desktop Navigation */}
