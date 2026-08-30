@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone } from 'lucide-react';
 import { siteConfig } from '@/data/config';
 import { Logo } from '@/components/ui/Logo';
@@ -10,6 +11,15 @@ export const Footer = () => {
 
   return (
     <footer className={styles.footer}>
+      <div className={styles.footerBackground}>
+        <Image 
+          src="/assets/footer-bg.jpg" 
+          alt="Automotive Detailing Studio" 
+          fill 
+          className={styles.bgImage} 
+        />
+        <div className={styles.bgOverlay}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Brand Column */}
