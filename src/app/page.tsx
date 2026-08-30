@@ -16,8 +16,13 @@ export default function Home() {
   // Select a few services for the preview
   const previewServices = services.slice(0, 3);
   
-  // Instagram placeholders
-  const instaPosts = Array.from({ length: 6 }, (_, i) => `/assets/instagram/instagram-0${i + 1}.jpg`);
+  // Instagram Reels
+  const instaReels = [
+    { url: "https://www.instagram.com/reel/DbnerLwzzaT/" },
+    { url: "https://www.instagram.com/reel/DaxcUzHzOaG/" },
+    { url: "https://www.instagram.com/reel/DYPXNcSz5XrXErOTTQnr9hS6XszYRL9jdJBzG80/" },
+    { url: "https://www.instagram.com/reel/DWQrmeEkz2k/" }
+  ];
 
   return (
     <>
@@ -189,20 +194,42 @@ export default function Home() {
             <p className={styles.sectionSubtitle}>More cars. More transformations. More detailing.</p>
           </div>
           
-          <div className={styles.instaGrid}>
-            {instaPosts.map((post, i) => (
-              <a key={i} href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className={styles.instaItem}>
-                <Image src={post} alt="Instagram Post" fill className={styles.instaImage} />
-                <div className={styles.instaOverlay}>
-                  {/* Instagram SVG */}
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
-                  </svg>
+          <div className={styles.reelsGrid}>
+            {instaReels.map((reel, i) => {
+              // Ensure clean embed URL
+              const baseUrl = reel.url.split('?')[0].replace(/\/$/, '');
+              const embedUrl = `${baseUrl}/embed/`;
+
+              return (
+                <div key={i} className={styles.reelCard}>
+                  <iframe 
+                    src={embedUrl}
+                    className={styles.reelIframe}
+                    frameBorder="0"
+                    scrolling="no"
+                    allowTransparency={true}
+                    loading="lazy"
+                    title={`Instagram Reel ${i + 1}`}
+                  ></iframe>
+                  {/* Overlay to handle hover effects and click-through */}
+                  <a 
+                    href={baseUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.reelOverlay}
+                    aria-label="View Instagram Reel"
+                  >
+                    <div className={styles.reelIconWrapper}>
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                      </svg>
+                    </div>
+                  </a>
                 </div>
-              </a>
-            ))}
+              );
+            })}
           </div>
           
           <div className={styles.centerAction}>
