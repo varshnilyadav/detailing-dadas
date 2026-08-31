@@ -15,7 +15,7 @@ import styles from './page.module.css';
 export default function Home() {
   // Select a few services for the preview
   const previewServices = services.slice(0, 3);
-  
+
   // Instagram Reels
   const instaReels = [
     { url: "https://www.instagram.com/reel/DbnerLwzzaT/" },
@@ -30,16 +30,16 @@ export default function Home() {
       <section className={styles.hero}>
         <HeroVideo />
         <div className={styles.heroOverlay}></div>
-        
+
         <div className={styles.heroContent}>
-          <h1 className={styles.heroHeadline}>Precision.<br/>Protection.<br/>Perfection.</h1>
+          <h1 className={styles.heroHeadline}>Precision.<br />Protection.<br />Perfection.</h1>
           <p className={styles.heroSubline}>Premium automotive detailing, protection and restoration for cars that deserve more.</p>
           <div className={styles.heroActions}>
             <Button href="/contact">Book Your Detail</Button>
             <Button href="/services" variant="secondary">Explore Services</Button>
           </div>
         </div>
-        
+
         <div className={styles.scrollIndicator}>
           <span>Scroll</span>
           <div style={{ width: 1, height: 40, backgroundColor: 'var(--color-green)' }}></div>
@@ -60,7 +60,7 @@ export default function Home() {
               At Detailing Dadas, automotive care goes beyond cleaning. We combine professional products, meticulous technique and attention to detail to restore, protect and elevate every vehicle we work on.
             </p>
           </div>
-          
+
           <div className={styles.statsGrid}>
             <div className={styles.statItem}>
               <h4>500+</h4>
@@ -89,10 +89,10 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>What We Do</h2>
             <p className={styles.sectionSubtitle}>Professional detailing. Long-lasting protection. Immaculate results.</p>
           </div>
-          
+
           <div className={styles.servicesGrid}>
             {previewServices.map((service) => (
-              <ServiceCard 
+              <ServiceCard
                 key={service.id}
                 slug={service.slug}
                 title={service.title}
@@ -101,7 +101,7 @@ export default function Home() {
               />
             ))}
           </div>
-          
+
           <div className={styles.centerAction}>
             <Button href="/services" variant="secondary">View All Services →</Button>
           </div>
@@ -120,11 +120,11 @@ export default function Home() {
       {/* Why Us */}
       <section className={`${styles.section} ${styles.whySection}`}>
         <div className={styles.whyBackground}>
-          <Image 
-            src="/assets/why-us-bg.jpg" 
-            alt="Premium automotive detailing" 
-            fill 
-            className={styles.whyBackgroundImage} 
+          <Image
+            src="/assets/why-us-bg.jpg"
+            alt="Premium automotive detailing"
+            fill
+            className={styles.whyBackgroundImage}
           />
           <div className={styles.whyBackgroundOverlay}></div>
         </div>
@@ -132,7 +132,7 @@ export default function Home() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Why Detailing Dadas?</h2>
           </div>
-          
+
           <div className={styles.whyGrid}>
             <div className={styles.whyItem}>
               <Shield className={styles.whyIcon} size={40} />
@@ -165,10 +165,10 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>What Our Customers Say</h2>
             <p className={styles.sectionSubtitle}>Join {siteConfig.reviews.count} satisfied customers on Google.</p>
           </div>
-          
+
           <div className={styles.reviewsGrid}>
             {reviews.map((review) => (
-              <ReviewCard 
+              <ReviewCard
                 key={review.id}
                 name={review.name}
                 profileImage={review.profileImage}
@@ -179,7 +179,7 @@ export default function Home() {
               />
             ))}
           </div>
-          
+
           <div className={styles.centerAction}>
             <Button href={siteConfig.location.googleMapsUrl} variant="secondary">View All Reviews on Google</Button>
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>Follow The Dadas Standard</h2>
             <p className={styles.sectionSubtitle}>More cars. More transformations. More detailing.</p>
           </div>
-          
+
           <div className={styles.reelsGrid}>
             {instaReels.map((reel, i) => {
               // Ensure clean embed URL
@@ -202,7 +202,7 @@ export default function Home() {
 
               return (
                 <div key={i} className={styles.reelCard}>
-                  <iframe 
+                  <iframe
                     src={embedUrl}
                     className={styles.reelIframe}
                     frameBorder="0"
@@ -212,18 +212,18 @@ export default function Home() {
                     title={`Instagram Reel ${i + 1}`}
                   ></iframe>
                   {/* Overlay to handle hover effects and click-through */}
-                  <a 
-                    href={baseUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={baseUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={styles.reelOverlay}
                     aria-label="View Instagram Reel"
                   >
                     <div className={styles.reelIconWrapper}>
                       <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
                       </svg>
                     </div>
                   </a>
@@ -231,7 +231,7 @@ export default function Home() {
               );
             })}
           </div>
-          
+
           <div className={styles.centerAction}>
             <Button href={siteConfig.social.instagram}>Follow @detailingdadas</Button>
           </div>

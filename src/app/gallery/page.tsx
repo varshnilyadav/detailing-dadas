@@ -6,12 +6,14 @@ import { X } from 'lucide-react';
 import styles from './page.module.css';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/assets/gallery/gallery-01.jpg', category: 'Exterior', title: 'Paint Correction' },
-  { id: 2, src: '/assets/gallery/gallery-02.jpg', category: 'Ceramic', title: 'Ceramic Coating Application' },
-  { id: 3, src: '/assets/gallery/gallery-03.jpg', category: 'PPF', title: 'Front Bumper PPF' },
-  { id: 4, src: '/assets/gallery/gallery-04.jpg', category: 'Interior', title: 'Deep Leather Cleaning' },
-  { id: 5, src: '/assets/gallery/gallery-05.jpg', category: 'Exterior', title: 'Foam Wash' },
-  { id: 6, src: '/assets/gallery/gallery-06.jpg', category: 'Ceramic', title: 'Gloss Enhancement' },
+  { id: 1, src: '/assets/gallery/gallery-1.jpeg', category: 'Exterior', title: 'Detailed Finish' },
+  { id: 2, src: '/assets/gallery/gallery-2.jpeg', category: 'Ceramic', title: 'Ceramic Coating Application' },
+  { id: 3, src: '/assets/gallery/gallery-3.jpeg', category: 'PPF', title: 'PPF Installation' },
+  { id: 4, src: '/assets/gallery/gallery-4.jpeg', category: 'Interior', title: 'Interior Deep Clean' },
+  { id: 5, src: '/assets/gallery/gallery-5.jpeg', category: 'Exterior', title: 'Foam Wash' },
+  { id: 6, src: '/assets/gallery/gallery-6.jpeg', category: 'Ceramic', title: 'Gloss Enhancement' },
+  { id: 7, src: '/assets/gallery/gallery-7.jpeg', category: 'Exterior', title: 'Paint Correction' },
+  { id: 8, src: '/assets/gallery/gallery-8.jpeg', category: 'PPF', title: 'Paint Protection Film' },
 ];
 
 const CATEGORIES = ['All', 'Exterior', 'Interior', 'Ceramic', 'PPF'];
