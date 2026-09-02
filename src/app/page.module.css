@@ -68,7 +68,7 @@
 }
 
 .heroHeadline {
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 800;
   text-transform: uppercase;
   line-height: 1.1;
@@ -83,11 +83,17 @@
 }
 
 .heroSubline {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--color-soft-white);
   margin-bottom: 2.5rem;
   max-width: 600px;
   line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .heroSubline {
+    font-size: 1.25rem;
+  }
 }
 
 .heroActions {
@@ -144,16 +150,28 @@
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+}
+
 .sectionSubtitle {
   color: var(--color-soft-white);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .sectionSubtitle {
+    font-size: 1.1rem;
+  }
 }
 
 /* Intro Section */
@@ -164,9 +182,15 @@
 }
 
 .introText {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--color-soft-white);
+}
+
+@media (min-width: 768px) {
+  .introText {
+    font-size: 1.2rem;
+  }
 }
 
 .statsGrid {
@@ -183,9 +207,15 @@
 }
 
 .statItem h4 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--color-green);
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .statItem h4 {
+    font-size: 2.5rem;
+  }
 }
 
 .statItem p {
@@ -463,13 +493,25 @@
 }
 
 .finalCta h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+  .finalCta h2 {
+    font-size: 3rem;
+  }
+}
+
 .finalCta p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--color-soft-white);
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .finalCta p {
+    font-size: 1.25rem;
+  }
 }

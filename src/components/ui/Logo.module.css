@@ -9,6 +9,13 @@
   object-fit: contain;
 }
 
+@media (max-width: 767px) {
+  .logoImage {
+    max-width: 140px !important;
+    height: auto !important;
+  }
+}
+
 .trademark {
   position: absolute;
   top: 5%;
