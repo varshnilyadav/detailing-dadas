@@ -6,11 +6,11 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import styles from './Carousel3D.module.css';
 
 const CARS = [
-  '/assets/cars/car-01.png',
-  '/assets/cars/car-02.png',
-  '/assets/cars/car-03.png',
-  '/assets/cars/car-04.png',
-  '/assets/cars/car-05.png',
+  { src: '/assets/gallery/gallery-1.jpeg', alt: 'Premium Detailing Exterior Finish' },
+  { src: '/assets/gallery/gallery-2.jpeg', alt: 'Ceramic Coating Application' },
+  { src: '/assets/gallery/gallery-3.jpeg', alt: 'PPF Installation' },
+  { src: '/assets/gallery/gallery-4.jpeg', alt: 'Interior Deep Clean' },
+  { src: '/assets/gallery/gallery-5.jpeg', alt: 'Gloss Enhancement and Polishing' },
 ];
 
 export const Carousel3D = () => {
@@ -86,8 +86,8 @@ export const Carousel3D = () => {
           >
             <div className={`${styles.card} ${index === currentIndex ? styles.activeCard : ''}`}>
               <Image 
-                src={car} 
-                alt={`Premium Detailing Showcase ${index + 1}`} 
+                src={car.src} 
+                alt={car.alt} 
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 className={styles.cardImage}
