@@ -1,0 +1,169 @@
+.teamSection {
+  padding: 6rem 0;
+  background-color: var(--color-black-light); /* Or var(--color-black) depending on contrast needed */
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--border-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible .sectionHeader {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.eyebrowLine {
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-green);
+  box-shadow: var(--glow-green);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .sectionTitle {
+    font-size: 3rem;
+  }
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--color-soft-white);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 576px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Team Card */
+.teamCard {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible .teamCard {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4; /* Classic portrait ratio */
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--color-carbon-black);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.cardImageWrapper:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(220, 255, 0, 0.05); /* subtle green glow */
+  border-color: rgba(220, 255, 0, 0.3); /* var(--color-green) but translucent */
+}
+
+.cardImage {
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  filter: grayscale(100%) contrast(1.05); /* Grayscale by default to match ref */
+}
+
+.cardImageWrapper:hover .cardImage {
+  transform: scale(1.08);
+  filter: grayscale(0%) contrast(1.1); /* Color on hover */
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 30%, transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  transition: background 0.5s ease;
+}
+
+.cardImageWrapper:hover .cardOverlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 40%, transparent 80%);
+}
+
+.cardContent {
+  width: 100%;
+  transform: translateY(5px);
+  transition: transform 0.4s ease;
+}
+
+.cardImageWrapper:hover .cardContent {
+  transform: translateY(0);
+}
+
+.memberName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 0.25rem;
+  letter-spacing: 1px;
+}
+
+.memberRole {
+  font-size: 0.9rem;
+  color: var(--color-green); /* Using accent color for role */
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
