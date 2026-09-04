@@ -6,6 +6,7 @@ import { ServiceCard } from '@/components/ui/ServiceCard';
 import { ReviewCard } from '@/components/ui/ReviewCard';
 import { Carousel3D } from '@/components/ui/Carousel3D';
 import Brands from '@/components/sections/Brands';
+import Founder from '@/components/sections/Founder';
 import { HeroVideo } from '@/components/ui/HeroVideo';
 import { services } from '@/data/services';
 import { reviews } from '@/data/reviews';
@@ -81,6 +82,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Founder Section */}
+      <Founder />
 
       {/* Services Preview */}
       <section className={styles.section}>

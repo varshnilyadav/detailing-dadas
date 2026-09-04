@@ -1,0 +1,142 @@
+.founderSection {
+  padding: 6rem 0;
+  background-color: var(--color-black);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 5rem;
+  }
+}
+
+/* Image */
+.imageColumn {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible .imageColumn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.founderImage {
+  object-fit: cover;
+  transition: transform 1s ease, filter 1s ease;
+  filter: grayscale(80%) contrast(1.1);
+}
+
+.imageWrapper:hover .founderImage {
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* Content */
+.contentColumn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.visible .contentColumn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.eyebrowLine {
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-green);
+  box-shadow: var(--glow-green);
+}
+
+.name {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .name {
+    font-size: 3.5rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  color: var(--color-soft-white);
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-soft-white);
+  max-width: 650px;
+}
+
+.signatureWrapper {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  max-width: 200px;
+}
+
+.signatureLine {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-green), transparent);
+}
