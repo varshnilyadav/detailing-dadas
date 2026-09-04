@@ -34,7 +34,7 @@ export default function Founder() {
           <div className={styles.imageColumn}>
             <div className={styles.imageWrapper}>
               <Image 
-                src="/assets/founder-placeholder.svg" 
+                src="/assets/ajay-founder.png" 
                 alt="Ajay Dasari - Founder"
                 fill
                 className={styles.founderImage}
