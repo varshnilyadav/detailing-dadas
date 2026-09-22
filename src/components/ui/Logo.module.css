@@ -7,9 +7,10 @@
 .logoImage {
   display: block;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .logoImage {
     max-width: 140px !important;
     height: auto !important;
