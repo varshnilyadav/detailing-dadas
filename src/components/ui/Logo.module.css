@@ -7,7 +7,6 @@
 .logoImage {
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 991px) {
