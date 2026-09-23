@@ -22,7 +22,7 @@ export const Logo: React.FC<LogoProps> = ({
   return (
     <div className={`${styles.logoContainer} ${isLarge ? styles.large : ''} ${className}`}>
       <Image 
-        src="/assets/logo.png" 
+        src="/assets/logo.jpg" 
         alt={siteConfig.name} 
         width={width} 
         height={height} 
